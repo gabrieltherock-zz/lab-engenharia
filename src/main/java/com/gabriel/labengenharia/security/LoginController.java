@@ -1,4 +1,4 @@
-package com.gabriel.labengenharia;
+package com.gabriel.labengenharia.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -27,11 +27,11 @@ public class LoginController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public String login(@RequestBody UsuarioCredenciais usuarioCredenciais) throws Exception {
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(usuarioCredenciais.getUsuario(),
-                        usuarioCredenciais.getSenha())
+                new UsernamePasswordAuthenticationToken(usuarioCredenciais.getUsername(),
+                        usuarioCredenciais.getPassword())
         );
         final UserDetails userDetails = usuarioService
-                .loadUserByUsername(usuarioCredenciais.getUsuario());
+                .loadUserByUsername(usuarioCredenciais.getUsername());
         final String token = jwtUtil.generateToken(userDetails);
         return "{\"token\":\"" + token + "\"}";
     }

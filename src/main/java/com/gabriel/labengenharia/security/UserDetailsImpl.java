@@ -1,4 +1,4 @@
-package com.gabriel.labengenharia;
+package com.gabriel.labengenharia.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,4 +1,4 @@
-package com.gabriel.labengenharia;
+package com.gabriel.labengenharia.pet;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

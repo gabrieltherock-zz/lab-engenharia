@@ -1,4 +1,4 @@
-package com.gabriel.labengenharia;
+package com.gabriel.labengenharia.security;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

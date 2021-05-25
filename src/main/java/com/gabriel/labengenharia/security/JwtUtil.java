@@ -1,4 +1,4 @@
-package com.gabriel.labengenharia;
+package com.gabriel.labengenharia.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
